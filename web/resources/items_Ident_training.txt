@@ -1,0 +1,11 @@
+Unique	File	Filename	Target	Word	Correct_Response	Previous_file_name	Child	Consonantal	Exists
+2	r2.wav	r2.wav			1				1
+3	r3.wav	r3.wav			1				1
+4	r4.wav	r4.wav			1				1
+5	r5.wav	r5.wav			1				1
+6	r6.wav	r6.wav			1				1
+7	r7.wav	r7.wav			0				1
+8	r8.wav	r8.wav			0				1
+9	r9.wav	r9.wav			0				1
+10	r10.wav	r10.wav			0				1
+11	r11.wav	r11.wav			0				1

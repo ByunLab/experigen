@@ -1,0 +1,9 @@
+Index	Word	File1	File2	Correct_Response	Exists
+1	air	air_Right_C81.wav	are_Wrong_C78.wav	File1	1
+2	beard	beard_Right_098.wav	bird_Wrong_1020.wav	File1	1
+3	fair	fair_Right_GS.wav	fear_Wrong_BW.wav	File1	1
+4	her	her_Right_Autumn.wav	hurt_Wrong_1056.wav	File1	1
+5	row	row_Right_JP.wav	row_Wrong_Percy.wav	File1	1
+6	steer	steer_Right_098.wav	stern_Wrong_1054.wav	File1	1
+7	truck	truck_Wrong_1043.wav	truck_Wrong_1056.wav	File1	1
+8	work	work_Wrong_1032.wav	work_Wrong_1055.wav	File1	1

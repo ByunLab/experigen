@@ -1,0 +1,67 @@
+<div style="text-align: left;">
+<input type="hidden" name="destination" value="demographics.csv">
+
+Please answer the following questions about yourself and your language background.
+
+<p>
+What is your age?<br>
+<input type="text" name="age" style="padding: 0px; width=20em;" size="30" maxlength="2">
+</p>
+
+<p>
+What is your gender?<br>
+<input type="text" name="gender" style="padding: 0px; width=20em;" size="30" maxlength="20">
+</p>
+
+<p>	
+Are you a native speaker of English?<br>
+	<select name="onlyenglish" style="width: 10em; left:12em; margin-top:2px;">
+		<option value="none">Please choose</option>
+		<option>yes</option>
+		<option>no</option>
+	</select>
+	
+<p style="padding-left:2em;">
+
+If your answer to the above was no, at what age did you learn English?<br>
+<input type="text" name="englishacquired" style="padding: 0px; width=20em;" size="30" maxlength="2">
+</p>
+
+<p>
+What variety of English do you speak?
+<select name="englishvariety">
+<option value="none">Please choose</option>
+<option value="Am">North American</option>
+<option value="Br">British, Scottish or Irish</option>
+<option value="Aus">Australian or NZ</option>
+<option value="Ind">Indian or other South Asian</option>
+<option value="other">other</option>
+</select>
+</p>
+
+<p>
+	Have you ever been diagnosed with a hearing impairment?<br>
+	<select name="heairingimpairment" style="width: 10em; left:12em; margin-top:2px;">
+		<option value="none">Please choose</option>
+		<option>yes</option>
+		<option>no</option>
+	</select>
+	
+<p>
+	Have you ever been diagnosed with a speech or language impairment? <br>
+	<select name="speechimpairment" style="width: 10em; left:12em; margin-top:2px;">
+		<option value="none">Please choose</option>
+		<option>yes</option>
+		<option>no</option>
+	</select>
+
+<p>
+
+You must be wearing headphones to complete this experiment. Click <a href="http://experigendata.s3.us-east-1.amazonaws.com/testexperigen/web/headphonecheck.html" target="_blank">here</a> to launch a headphone screening task. (You will see a page of text starting with "You must be wearing headphones to do this HIT!") If you complete the task successfully, you will receive an alphanumeric code. Copy that code and paste it in the box below to continue. <br>
+<input type="text" name="headphones" style="padding: 0px; width=20em;" size="30" maxlength="30">
+
+<P style="text-align: center;">
+<input type="button" value="   send   " onClick="Experigen.recordDemographicsResponse(this);">
+	
+
+</div>

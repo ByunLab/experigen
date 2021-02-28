@@ -1,0 +1,16 @@
+<%
+var perc = (100*Experigen.accuracy/Experigen.accuracyTotal).toFixed(0);
+%>
+
+
+<div class="trialpartWrapper" style="text-align: left;">
+You agreed with our expert listeners <%=perc%>&#37; of the time.<p>
+
+You may listen to the practice trials again, or you may continue on to the test trials.<p>
+
+	<%= continueButton() %>
+	<input type="button" value="practice again" onclick="Experigen.accuracy=0;Experigen.accuracyTotal=0;Experigen.rewind(Experigen.preTrainingBookmark);">
+
+	
+</div>
+

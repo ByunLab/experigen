@@ -1,0 +1,47 @@
+<% 
+	var prompt="";
+	Experigen.fieldsToSave["difficulty"] = true;
+	Experigen.fieldsToSave["Block"] = true;
+	Experigen.fieldsToSave["File1"] = true;
+	Experigen.fieldsToSave["File2"] = true;	
+    Experigen.fieldsToSave["Target"] = true;
+	Experigen.fieldsToSave["Correct_Response"] = true;
+        var sounds = [{sound: File1, response: 1}, {sound: File2, response: 2}].shuffle();
+        Experigen.screen()["FirstPresented"] = sounds[0].sound;
+        Experigen.fieldsToSave["FirstPresented"] = true;
+        if(sounds[0].response == 2){ // flip
+            Experigen.screen().Correct_Response = Experigen.screen().Correct_Response == "File1" ? "File2" : "File1";
+            
+        }
+%>
+<div style="text-align: center; line-height:130%;">
+	<p>
+	Listen to the following words. You may listen to each word up three times. 
+	<p>
+	Please click the button for the word with the BEST /r/ SOUND.
+	<p>
+	Word 1
+	Word 2
+</div>
+
+<div style="text-align: center; class="trialpartWrapper" style="float:center; height: 3em; width: 40%;">
+	<%= makeWAVSoundButton({soundFile: sounds[0].sound, maxRepeat: 3, folder: Experigen.settings.folders.practice_sounds }) %> <%= makeWAVSoundButton({soundFile: sounds[1].sound, maxRepeat: 3, folder: Experigen.settings.folders.practice_sounds }) %> 
+	
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">  
+	Rating
+	<p>
+	<%= makeScale({buttons: ["Word 1", "Word 2"], runextra: "$('#prompt').html(Experigen.trainingAnswer(document.forms['currentform']['response1'].value,Experigen.screen().Correct_Response));"}) %>
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center">
+	
+	
+	<div id="prompt" style="padding-bottom:2ex"><p><%= prompt %></p></div>
+	<%= continueButton() %>
+
+</div>
+
+
+<div style="clear: both; height: 1px;">&nbsp;</div>

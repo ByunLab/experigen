@@ -1,0 +1,40 @@
+<% 
+	var prompt="";
+	Experigen.fieldsToSave["File1"] = true;
+	Experigen.fieldsToSave["File2"] = true;	
+	Experigen.fieldsToSave["Correct_Response"] = true;
+	Experigen.fieldsToSave["Block"] = true;
+        var sounds = [File1, File2].shuffle();
+        Experigen.screen()["FirstPresented"] = sounds[0];
+        Experigen.screen()["SecondPresented"] = sounds[1];
+        Experigen.fieldsToSave["FirstPresented"] = true;
+         Experigen.fieldsToSave["SecondPresented"] = true;
+%>
+
+<div style="text-align: center; line-height:130%;">
+	<p>
+	Listen to the following words. You may listen to each word up three times. 
+	    <p>
+    Please click the button for the word with the BEST /r/ SOUND.
+	<p>
+                <%= word %>
+</div>
+
+<div style="text-align: center; class="trialpartWrapper" style="float:center; height: 3em; width: 40%;">
+	<%= makeWAVSoundButton({soundFile: sounds[0], maxRepeat: 3, folder: Experigen.settings.folders.sounds }) %> <%= makeWAVSoundButton({soundFile: sounds[1], maxRepeat: 3, folder: Experigen.settings.folders.sounds }) %> 
+	
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">  
+    Classify the sound pair
+    <p>
+	<%= makeScale({buttons: ["OK", "Too similar", "Problem with sound 1", "Problem with sound 2"]}) %>
+        
+</div>
+
+<p>
+Option to add a qualitative comment:
+<input type="text" name="qualcode" style="padding: 0px; width=20em;" size="30" maxlength="30">
+<p>
+
+<div style="clear: both; height: 1px;">&nbsp;</div>

@@ -1,0 +1,36 @@
+<% 
+	var prompt="";
+	Experigen.fieldsToSave["File"] = true;
+	Experigen.fieldsToSave["Target"] = true;
+%>
+
+<div style="text-align: center; line-height:130%;">
+	<p>
+	Listen to the word...
+	<p>
+</div>
+
+<p><img src="resources/ear.png" width="200"><p>
+
+<div class="trialpartWrapper" style="float:left; height: 3em; width: 40%;">
+	<%= makeWAVSoundButton({soundFile: Filename, maxRepeat: 1, folder: Experigen.settings.folders.test_sounds }) %> 
+	
+	
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">  
+
+	<p>
+	<%= makeScale({buttons: ["wake", "rake"], runextra: "$('#prompt').html(Experigen.trainingAnswer(document.forms['currentform']['response1'].value,Experigen.screen().Correct_Response));"}) %>
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center">
+	
+	
+	<div id="prompt" style="padding-bottom:2ex"><p><%= prompt %></p></div>
+	<%= continueButton() %>
+
+</div>
+
+
+<div style="clear: both; height: 1px;">&nbsp;</div>
